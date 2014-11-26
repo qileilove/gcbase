@@ -1,4 +1,4 @@
-FROM ubuntu:14.04.1
+FROM twgc/base:0.1
 
 RUN groupadd -r redis && useradd -r -g redis redis
 
