@@ -1,0 +1,24 @@
+cache:
+  image: twgc/redis:0.3
+  ports:
+    - "6379:6379"
+  volumes:
+    - "redis/data:/data"
+db:
+  image: twgc/mongodb:0.3
+  ports:
+    - "27017:27017"
+search:
+  image: twgc/solr:0.3
+  ports:
+    - "8982:8982"
+  volumes:
+    - "solr/data:/etc/solr/data"
+web:
+  image: twgc/nginx:0.3
+  ports:
+    - "443:443"
+    - "80:80"
+  volumes:
+    - "nginx/sites-enabled:/etc/nginx/sites-enabled"
+    - "nginx/log:/var/log/nginx"
