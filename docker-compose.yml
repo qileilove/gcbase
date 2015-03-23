@@ -5,7 +5,7 @@ cache:
   volumes:
     - "redis/data:/data"
 db:
-  image: twgc/mongodb:0.3
+  image: twgc/mongodb:0.4
   ports:
     - "27017:27017"
 search:
